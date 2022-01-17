@@ -20,6 +20,7 @@ form.addEventListener('submit', function (e) {
 
 resetBtn.addEventListener('click', function (e) {
   form.reset();
+  firstnameEl.focus();
 });
 
 marriedEl.addEventListener('click', function (e) {
