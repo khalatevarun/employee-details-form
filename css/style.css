@@ -112,3 +112,7 @@ textarea {
 .inline-input input {
   width: auto !important;
 }
+
+.form-item .inline-input {
+  width: auto !important;
+}

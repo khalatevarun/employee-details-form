@@ -3,12 +3,15 @@ const formItems = [
     name: 'FirstName',
     label: 'FirstName',
     id: 'firstname',
+    autocomplete: 'off',
     type: 'text',
   },
   {
     name: 'LastName',
     label: 'LastName',
     id: 'lastname',
+    autocomplete: 'off',
+
     type: 'text',
   },
   {
@@ -28,7 +31,7 @@ const formItems = [
     type: 'radio',
   },
   {
-    name: 'Spouse',
+    name: 'Name of Spouse',
     label: 'Name of Spouse',
     id: 'spouse',
     type: 'text',
@@ -37,13 +40,19 @@ const formItems = [
     name: 'Other Details',
     label: 'Other Details',
     id: 'otherdetails',
-    type: 'text',
+    type: 'textarea',
+  },
+  {
+    type: 'checkbox',
+    label: 'I accept the terms and conditions',
+    id: 'tnc',
+    name: 'tnc',
   },
   {
     type: 'button',
     value: 'Reset',
     id: 'reset-button',
-    class: 'btn',
+    class: 'btn reset',
   },
   {
     type: 'submit',
@@ -51,5 +60,3 @@ const formItems = [
     class: 'btn',
   },
 ];
-
-export { formItems };
