@@ -2,53 +2,16 @@
 <html>
     <head>
         <title>Employee Details Form</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
        
     </head>
     <body>
         <div class="container">
             <form id="details" class="employee-form">
                 <h1>Employee Details</h1>
-                <div class="form-item">
-                    <label for="FirstName">FirstName:</label>
-                    <input type="text" name="FirstName" id="firstname" autocomplete="off" autofocus/>
-                </div>
-                <div class="form-item">
-                    <label for="LastName">LastName:</label>
-                    <input type="text" name="LastName" id="lastname" autocomplete="off"/>
-                </div>
-                <div class="form-item">
-                   <p>Gender:</p>
-                    <input type="radio" name="gender" id="male" />
-                    <span>MALE</span>
-                    <input type="radio" name="gender" id="female" />
-                    <span>FEMALE</span>
-                </div>
-                <div class="form-item">
-                    <p>Marital Status:</p>
-                     <input type="radio" name="status" id="married" />
-                     <span>Married</span>
-                     <input type="radio" name="status" id="unmarried" />
-                     <span>Unmarried</span>
-                 </div>
-                 <div class="form-item">
-                    <label for="Spouse">Name of Spouse:</label>
-                    <input type="text" name="Spouse" id="spouse" />
-                </div>
-                <div class="form-item">
-                    <label for="otherdetails">Other details:</label>
-                    <textarea name="otherdetails" id="otherdetails"></textarea>
-                </div>
-               
-                    <input type="checkbox" id="tnc" name="tnc">
-                    <label for="tnc"> I accept the terms and conditions</label><br>
-                    <br/>
-                <div class="form-item actions">
-                    <input type="button" value="Reset" id="reset-button" class="btn"/>
-                    <input type="submit" value="Submit" class="btn"/>
-                </div>
             </form>
         </div>
-        <script src="index.js"></script>
+       
+        <script type="module"  src="js/index.js" ></script>
     </body>
 </html>
