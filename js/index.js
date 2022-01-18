@@ -1,27 +1,24 @@
 const form = document.querySelector('#details');
 
+// dynamically generate html input elements for the form from the formItem array
+
 function render() {
   for (let i = 0; i < formItems.length; i++) {
-    let message = document.createElement('small');
     var item = document.createElement('div');
     item.setAttribute('class', 'form-item');
     let field;
     switch (formItems[i].type) {
       case 'text':
         field = createTextInput(item, formItems[i]);
-        field.appendChild(message);
         break;
       case 'radio':
         field = createRadioInput(item, formItems[i]);
-        field.appendChild(message);
         break;
       case 'textarea':
         field = createTextArea(item, formItems[i]);
-        field.appendChild(message);
         break;
       case 'checkbox':
         field = createCheckboxInput(item, formItems[i]);
-        field.appendChild(message);
         break;
       case 'button':
         field = createButton(item, formItems[i]);
@@ -36,6 +33,8 @@ function render() {
 }
 
 render();
+
+// store the elements for validation in variables
 
 const firstnameEl = document.querySelector('#firstname');
 const lastnameEl = document.querySelector('#lastname');
@@ -84,6 +83,8 @@ function handleSubmit(e) {
   }
 }
 
+//handle reset form button click
+
 function handleReset(e) {
   form.reset();
   const messages = document.getElementsByTagName('small');
@@ -95,6 +96,8 @@ function handleReset(e) {
   firstnameEl.focus();
 }
 
+// enable/disable "name of spouse" element based on the status selected
+
 function handleStatus(e) {
   if (e.target.id === 'married') {
     spouseEl.disabled = false;
@@ -105,19 +108,9 @@ function handleStatus(e) {
   }
 }
 
+// give instant feedback for input by checking validation conditions on every input
+
 function handleFormInput(e) {
-  // e.preventDefault();
-  // switch (e.target.id) {
-  //   case 'firstname':
-  //     checkName(e.target);
-  //     break;
-  //   case 'lastname':
-  //     checkName(e.target);
-  //     break;
-  //   case 'otherdetails':
-  //     checkName(e.target);
-  //     break;
-  // }
   e.preventDefault();
   checkName(e.target, e);
 }

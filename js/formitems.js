@@ -11,7 +11,6 @@ const formItems = [
     label: 'LastName',
     id: 'lastname',
     autocomplete: 'off',
-
     type: 'text',
   },
   {

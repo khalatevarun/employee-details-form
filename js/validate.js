@@ -1,3 +1,5 @@
+//check if either of status is selected
+
 const checkStatus = () => {
   let valid = true;
   if (!marriedEl.checked && !unmarriedEl.checked) {
@@ -10,6 +12,8 @@ const checkStatus = () => {
   return valid;
 };
 
+//check if either of gender is selected
+
 const checkGender = () => {
   let valid = true;
   if (!maleEl.checked && !femaleEl.checked) {
@@ -21,6 +25,8 @@ const checkGender = () => {
   return valid;
 };
 
+//check if term and conditions are accepted
+
 const checkTerms = () => {
   let valid = true;
   if (!termsEl.checked) {
@@ -31,6 +37,8 @@ const checkTerms = () => {
   showSuccess(termsEl);
   return valid;
 };
+
+//check whether the input elements are empty or not
 
 const isRequired = (value) => (value === '' ? false : true);
 
@@ -52,11 +60,11 @@ const showSuccess = (input) => {
   error.textContent = '';
 };
 
+// check if the input for names satisfies the validation condition
+
 const checkName = (nameEl, e = null) => {
   let valid = false;
-
   const currentName = nameEl.value;
-
   if (!isRequired(currentName)) {
     showError(nameEl, `${nameEl.name} cannot be blank.`);
   } else if (nameEl.type !== 'textarea' && /[^a-zA-Z]/.test(currentName)) {
